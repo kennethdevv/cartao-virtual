@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Virtual</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to left, #ffe6e6, #fa2396);
+            padding: 50px;
+        }
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .card {
+            display: inline-block;
+            background: #fff;
+            border: 2px solid #ff80bf;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            margin: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Abra quando...</h1>
+    <div class="card" onclick="showMessage('happy')">Estiver Feliz 😊</div>
+    <div class="card" onclick="showMessage('sad')">Estiver Triste 😢</div>
+    <div class="card" onclick="showMessage('missing')">Sentir minha Falta ❤️</div>
+
+    <div class="message" id="happy">Estou feliz por você estar sorrindo! O seu sorriso é um dos maiores motivos da minha felicidade  ! </div>
+    <div class="message" id="sad">Lembre-se de que eu estou aqui para te apoiar e lhe ajudar em tudo que precisar <br>. Você nunca está sozinha minha princesa ! 🤍 </div>
+    <div class="message" id="missing"> Saudades é uma das piores coisas que existe <br>Contudo,sempre estarei contigo,mesmo longe , estou nos seus acessorios, roupas e principalmente no nosso NONEN <br> Jajá chega sábado para nos vermos , não fique triste ,  vou lhe mimar bem muito 🌎💙</div>
+
+    <script>
+        function showMessage(id) {
+            const messages = document.querySelectorAll('.message');
+            messages.forEach(msg => msg.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
